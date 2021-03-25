@@ -20,7 +20,7 @@ class NameFrequency:
         data.dropna(inplace=True)
         data_frame = dict(data[column_name].str.split(" ", n=1, expand=True))
         self.data_frame = data_frame
-        if isinstance(self.data_frame, pd.DataFrame):
+        if isinstance(self.data_frame, dict):
             return True
         return False
 
